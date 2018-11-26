@@ -9,7 +9,10 @@
         </GridLayout>
     </ActionBar>
     <StackLayout height="500" width="100%">
-        <Button text="ConnectDataBase" class="btn" (tap)="onTap($event)"></Button>
+        <StackLayout shadow elevation="4" padding="10">
+            <Button text="ConnectDataBase" class="btn" (tap)="onTap($event)"></Button>
+        </StackLayout>
+
         <Button text="Login" (tap)="onTapLogin($event)"></Button>
 
         <TextField hint="asdasdasd" text=""></TextField>

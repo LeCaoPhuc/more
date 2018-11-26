@@ -13,6 +13,7 @@ import { ShareDataService } from '~/shared/services';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 import { SideDrawerService, MultiLanguageService, OdooSDKService, LocalStorageService, FirebaseService } from "./services";
+import { NgShadowModule } from "nativescript-ngx-shadow";
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, "/assets/i18n/", ".json");
 }
@@ -23,6 +24,7 @@ export function createTranslateLoader(http: HttpClient) {
         NativeScriptFormsModule,
         NativeScriptHttpModule,
         NativeScriptHttpClientModule,
+        NgShadowModule,
         TNSFontIconModule.forRoot({
             'mdi': 'fonts/material-design-icons.css'
         }),
@@ -50,7 +52,8 @@ export function createTranslateLoader(http: HttpClient) {
         TNSFontIconModule,
         TranslateModule,
         NativeScriptUISideDrawerModule,
-        NativeScriptUIListViewModule
+        NativeScriptUIListViewModule,
+        NgShadowModule
     ],
     schemas: [
         NO_ERRORS_SCHEMA
