@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "73831114664",
+    "firebase_url": "https://smartcare-96593.firebaseio.com",
+    "project_id": "smartcare-96593",
+    "storage_bucket": "smartcare-96593.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73831114664:android:1397daa378818580",
+        "android_client_info": {
+          "package_name": "com.innoria.smartcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73831114664-l8o72spdt5qpgfegfrqub6hn4m7ubdqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxQK3W6zmuyKU_XtGl6bZnwAEV3TlY8AY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+app/**/*.js
+!app/**/libs/*.js
+hooks/
+lib/
+node_modules/
+platforms/
+tmp/
+typings/
+!plugins/**/platforms
+.DS_Store
+report/
+.idea/
+package-lock.json
+webpack-cache/

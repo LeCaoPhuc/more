@@ -1,0 +1,20 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.map": {
+            "when": "$(basename).map"
+        }
+    },
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/platforms": true
+    },
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "workbench.panel.location": "bottom",
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true
+}

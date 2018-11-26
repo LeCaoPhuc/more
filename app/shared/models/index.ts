@@ -1,0 +1,1 @@
+export * from "./odoo-user-model/odoo-user.model"

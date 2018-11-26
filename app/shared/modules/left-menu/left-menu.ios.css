@@ -1,0 +1,12 @@
+.container {
+    background-color: #f2f2f2;
+   
+}
+.container-content {
+    margin: 20;
+    background-color: #f2f2f2;
+}
+.item-text {
+    font-size: 13;
+    color: #9C27B0;
+}

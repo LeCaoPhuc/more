@@ -1,0 +1,25 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var element_registry_1 = require("nativescript-angular/element-registry");
+var nativescript_fresco_directives_1 = require("./nativescript-fresco-directives");
+var _1 = require("../");
+var TNSFrescoModule = (function () {
+    function TNSFrescoModule() {
+    }
+    TNSFrescoModule = __decorate([
+        core_1.NgModule({
+            declarations: [nativescript_fresco_directives_1.NSFRESCO_DIRECTIVES],
+            exports: [nativescript_fresco_directives_1.NSFRESCO_DIRECTIVES],
+        })
+    ], TNSFrescoModule);
+    return TNSFrescoModule;
+}());
+exports.TNSFrescoModule = TNSFrescoModule;
+element_registry_1.registerElement("FrescoDrawee", function () { return _1.FrescoDrawee; });
