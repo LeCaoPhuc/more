@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as moment from 'moment';
-import { TranslateService } from "ng2-translate";
+import { TranslateService } from "@ngx-translate/core";
 import { ShareDataService, SideDrawerService } from "~/shared";
 import * as platform from "platform";
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
@@ -12,7 +12,6 @@ import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
     styleUrls: ["./left-menu.css"],
 })
 export class LeftMenuComponent implements OnInit {
-    public
     constructor(
         public translateService: TranslateService,
         public shareDataService: ShareDataService,

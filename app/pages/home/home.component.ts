@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, Injectable, ChangeDetectorRef } from "@angular/core";
 import * as moment from 'moment';
-import { TranslateService } from "ng2-translate";
-import { ShareDataService, SideDrawerService, OdooSDKService, LocalStorageService, FirebaseService } from "~/shared";
+import { TranslateService } from "@ngx-translate/core";
+import { ShareDataService, SideDrawerService, OdooSDKService, LocalStorageService, FirebaseService, MultiLanguageService } from "~/shared";
 import { Http } from "@angular/http";
 import { Page, Color } from "tns-core-modules/ui/page/page";
 import * as utils from "utils/utils";
@@ -12,7 +12,7 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-ui-sidedraw
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 import * as app from "tns-core-modules/application";
 import { ObservableArray } from "tns-core-modules/data/observable-array/observable-array";
-import { showLoadingIndicator, hideLoadingIndicator } from "~/utils"
+import { showLoadingIndicator, hideLoadingIndicator } from "~/utils";
 import { Message } from "nativescript-plugin-firebase";
 @Component({
     selector: "ns-home",
@@ -24,12 +24,11 @@ export class HomeComponent implements OnInit {
     public frame = frame;
     private drawer: RadSideDrawer;
     public dataItems: ObservableArray<any>;
-    // This pattern makes use of Angular’s dependency injection implementation to inject an instance of the ItemService service into this class. 
-    // Angular knows about this service because it is included in your app’s main NgModule, defined in app.module.ts.
     constructor(
         public translateService: TranslateService,
         public shareDataService: ShareDataService,
         public sideDrawerService: SideDrawerService,
+        public multiLanguageService: MultiLanguageService,
         public changeDetectorRef: ChangeDetectorRef,
         public localStorageService: LocalStorageService,
         public odooSDKService: OdooSDKService,
@@ -37,13 +36,13 @@ export class HomeComponent implements OnInit {
         public http: Http,
         public page: Page
     ) {
-        this.dataItems = new ObservableArray([{ name: "Atalanta" }, { name: "Achilles" }])
-        for (var i = 0; i < 40; i++) {
+        this.dataItems = new ObservableArray([{ name: "Atalanta" }, { name: "Achilles" }]);
+        console.log("multilaungue ", this.multiLanguageService.get("HOME_SCREEN.SUB_TITLE"));
+        for (let i = 0; i < 40; i++) {
             this.dataItems.push({
                 name: "atalanta" + i
-            })
+            });
         }
-
     }
 
     ngOnInit(): void {
@@ -56,18 +55,18 @@ export class HomeComponent implements OnInit {
         }
         this.firebaseService.initFireBase({
             onMessageReceivedCallback: function (message: Message) {
-                console.log("success firebase : ", message)
+                console.log("success firebase : ", message);
                 alert(message.body);
             },
             onPushTokenReceivedCallback: function (token: string) {
                 console.log("receive token", token);
             }
-        })
+        });
     }
 
     ngAfterViewInit() {
         console.log("ngAfterViewInit");
-        var self = this;
+        let self = this;
 
         // var interval = setInterval(function () {
         //     if (self.drawer) {
@@ -82,15 +81,15 @@ export class HomeComponent implements OnInit {
     }
     onTap(args) {
         // showLoadingIndicator();
-        var self = this;
-        var serverUrl = 'https://odev.innoria.com'
+        let self = this;
+        let serverUrl = 'https://odev.innoria.com';
         this.odooSDKService.getDbList(serverUrl)
             .then((data: Array<string>) => {
                 console.log("----onServerUrlInputBlur - getDbList: ", data);
                 self.localStorageService.set("config", {
                     dbName: data[3],
                     serverUrl: serverUrl
-                })
+                });
             })
             .catch((error) => {
                 console.log("----onServerUrlInputBlur - getDbList error: ", error);

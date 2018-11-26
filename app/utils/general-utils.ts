@@ -18,7 +18,7 @@ export function checkInternetConnection() {
 
 export function showToast(message: string, longTime?: boolean) {
     if (longTime) {
-        Toast.makeText(message, Toast.duration.long[0])
+        Toast.makeText(message, Toast.duration.long[0]);
     }
     else {
         Toast.makeText(message).show();

@@ -12,8 +12,8 @@ export class SideDrawerService {
 
     }
     public init() {
-        var self = this;
-        var interval = setInterval(function () {
+        let self = this;
+        let interval = setInterval(function () {
             if (self.sideDrawer) {
                 clearInterval(interval);
             }
@@ -21,7 +21,7 @@ export class SideDrawerService {
                 self.sideDrawer = <RadSideDrawer>app.getRootView();
                 // self.changeDetectorRef.detectChanges();
             }
-        }, 10)
+        }, 10);
     }
     public openDrawer() {
         this.sideDrawer.showDrawer();

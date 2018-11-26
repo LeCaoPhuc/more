@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as moment from 'moment';
-import { TranslateService } from "ng2-translate";
+import { TranslateService } from "@ngx-translate/core";
 import { ShareDataService } from "~/shared";
 import * as platform from "platform";
 @Component({

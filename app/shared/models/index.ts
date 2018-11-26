@@ -1,1 +1,1 @@
-export * from "./odoo-user-model/odoo-user.model"
+export * from "./odoo-user-model/odoo-user.model";
