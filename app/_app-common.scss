@@ -1,0 +1,58 @@
+@import "./styles/custom.scss";
+
+.mdi {
+    font-family: "Material Icons", "MaterialIcons-Regular";
+}
+
+.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+}
+
+/*CUSTOM UI*/
+
+.segmented-bar-layout {
+    border-bottom-width: 0.5;
+    border-bottom-style: solid;
+    border-color: $borderColor;
+    background-color: white;
+}
+
+.list-picker {
+    color: $primaryDarkColor;
+    font-size: 16;
+}
+
+.list-view {
+    background-color: $listViewBackgroundColor;
+}
+
+.text-primary {
+    color: $primaryDarkColor;
+}
+
+.text-danger {
+    color: $textDangerColor;
+}
+
+.text-muted {
+    color: $textMutedColor;
+}
+
+.btn {
+    margin: 0;
+}
+
+.h1 .h2 .h3 .h4 .h5 .h6 {
+    color: black;
+}
+/*CUSTOM UI*/
+
+
+.list-view-empty-text {
+    text-align: center;
+    vertical-align: center;
+}
+
+.error-message {
+    color: $textDangerColor;
+}

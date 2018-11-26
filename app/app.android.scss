@@ -1,0 +1,175 @@
+// Import app variables
+@import 'app-variables.scss';
+
+// Import the theme’s main ruleset - both index and platform specific.
+@import '~nativescript-theme-core/scss/index';
+@import '~nativescript-theme-core/scss/platforms/index.android';
+
+// Import common styles
+@import 'app-common.scss';
+
+// Place any CSS rules you want to apply only on Android here
+
+.roboto-light {
+    font-family: "Roboto-Light";
+}
+
+.roboto-regular  {
+    font-family: "Roboto-Regular";
+}
+
+.roboto-medium {
+    font-family: "Roboto-Medium";
+}
+
+.roboto-bold {
+    font-family: "Roboto-Bold";
+}
+
+// TYPOGRAPHY SYSTEM
+
+.h1 {
+    @extend .roboto-light;
+    font-size: 96;
+}
+
+.h2 {
+    @extend .roboto-light;
+    font-size: 60;
+}
+
+.h3 {
+    @extend .roboto-regular;
+    font-size: 48;
+}
+
+.h4 {
+    @extend .roboto-regular;
+    font-size: 34;
+}
+
+.h5 {
+    @extend .roboto-regular;
+    font-size: 24;
+}
+
+.h6 {
+    @extend .roboto-medium;
+    font-size: 20;
+}
+
+.subtitle {
+    @extend .roboto-bold;
+    font-size: 16;
+}
+
+
+.tab-view {
+    @extend .roboto-regular;
+    font-size: 10;
+}
+
+.segmented-bar {
+    @extend .roboto-light;
+    font-size: 13;
+    selected-background-color: $innoriaBlue700;
+    color: $innoriaBlue700;
+}
+
+.list-view-empty-text {
+    @extend .roboto-light;
+    color: $materialGray500;
+    font-size: 14;
+}
+
+.list-view-group-title {
+    @extend .roboto-medium;
+    font-size: 13;
+    color: $materialGray800;
+    text-transform: uppercase;
+}
+
+.list-view-item-header-title {
+    @extend .roboto-regular;
+    font-size: 14;
+    color: $materialGray900;
+}
+
+.list-view-item-title {
+    @extend .roboto-medium;
+    font-size: 14;
+    color: $materialGray800;
+}
+
+.list-view-item-title-2 {
+    @extend .roboto-light;
+    font-size: 12;
+    color: $materialGray900;
+}
+
+.list-view-item-primary-content {
+    @extend .roboto-light;
+    font-size: 12;
+    color: $materialGray700;
+}
+
+.list-view-item-caption-content {
+    @extend .roboto-regular;
+    font-size: 13;
+    color: #BEC0C4;
+}
+
+.list-view-item-accent-content {
+    @extend .roboto-regular;
+    font-size: 17;
+    color: $materialGray600;
+}
+
+.form-title-text {
+    @extend .roboto-regular;
+    font-size: 14;
+    color: $materialGray800;
+}
+
+.tab-view {
+    selected-tab-text-color: $innoriaBlue700;
+}
+
+.tab-view {
+    tab-text-color: #b5b3b3;
+}
+
+.tab-view {
+    tab-background-color: white;
+}
+
+.tab-view {
+    android-selected-tab-highlight-color: white;
+}
+
+.segmented-bar {
+    selected-background-color: $primaryColor;
+}
+
+.segmented-bar {
+    color: $primaryDarkColor;
+}
+
+.btn {
+    @extend .roboto-medium;
+    font-size: 13;
+}
+
+.input {
+    @extend .roboto-regular;
+    font-size: 14;
+}
+
+TextField {
+    @extend .roboto-regular;
+    font-size: 14;
+}
+
+PullToRefresh {
+    color: $primaryColor;
+}

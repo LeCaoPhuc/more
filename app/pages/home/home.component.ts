@@ -18,7 +18,7 @@ import { Message } from "nativescript-plugin-firebase";
     selector: "ns-home",
     moduleId: module.id,
     templateUrl: "./home.html",
-    styleUrls: ["./home.css"],
+    styleUrls: ["./home.scss"],
 })
 export class HomeComponent implements OnInit {
     public frame = frame;

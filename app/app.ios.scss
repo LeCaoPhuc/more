@@ -1,0 +1,169 @@
+// Import app variables
+@import 'app-variables.scss';
+
+// Import the theme’s main ruleset - both index and platform specific.
+@import '~nativescript-theme-core/scss/index';
+@import '~nativescript-theme-core/scss/platforms/index.ios';
+
+// Import common styles
+@import 'app-common.scss';
+
+// Place any CSS rules you want to apply only on iOS here
+
+.roboto-light {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+.roboto-regular  {
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+.roboto-medium {
+    font-family: "Roboto";
+    font-weight: 500;
+}
+
+.roboto-bold {
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+// TYPOGRAPHY SYSTEM
+
+.h1 {
+    @extend .roboto-light;
+    font-size: 96;
+}
+
+.h2 {
+    @extend .roboto-light;
+    font-size: 60;
+}
+
+.h3 {
+    @extend .roboto-regular;
+    font-size: 48;
+}
+
+.h4 {
+    @extend .roboto-regular;
+    font-size: 34;
+}
+
+.h5 {
+    @extend .roboto-regular;
+    font-size: 24;
+}
+
+.h6 {
+    @extend .roboto-medium;
+    font-size: 20;
+}
+
+.subtitle {
+    @extend .roboto-bold;
+    font-size: 18;
+}
+
+ActionBar {
+    color: white;
+    background-color: $innoriaBlue800;
+}
+
+.tab-view {
+    @extend .roboto-regular;
+    font-size: 12;
+}
+
+.tab-view {
+    tab-background-color: #ffffff;
+}
+
+.tab-view {
+    selected-tab-text-color: $innoriaBlue700;
+}
+
+.segmented-bar {
+    @extend .roboto-light;
+    selected-background-color: $innoriaBlue700;
+    color: $innoriaBlue700;
+}
+
+.list-view-empty-text {
+    @extend .roboto-light;
+    color: $materialGray500;
+    font-size: 14;
+}
+
+.list-view-group-title {
+    @extend .roboto-medium;
+    font-size: 15;
+    color: $materialGray800;
+    text-transform: uppercase;
+}
+
+.list-view-item-title {
+    @extend .roboto-medium;
+    font-size: 16;
+    color: $materialGray800;
+}
+
+.list-view-item-title-2 {
+    @extend .roboto-light;
+    font-size: 14;
+    color: $materialGray900;
+}
+
+.list-view-item-primary-content {
+    @extend .roboto-light;
+    font-size: 14;
+    color: $materialGray700;
+}
+
+.list-view-item-caption-content {
+    @extend .roboto-regular;
+    font-size: 14;
+    color: #BEC0C4;
+}
+
+.list-view-item-accent-content {
+    @extend .roboto-regular;
+    font-size: 18;
+    color: $materialGray600;
+}
+
+.form-title-text {
+    @extend .roboto-regular;
+    font-size: 16;
+    color: $materialGray800;
+}
+
+.input-field-border {
+    font-size: 16;
+    padding: 12 12 12 12;
+    border-radius: 3%;
+    border-color: $inputBorderColor;
+    border-width: 0.5;
+    color: $inputTextColor;
+}
+
+.segmented-bar {
+    margin: $padding12 $padding16 $padding12 $padding16;
+}
+
+.btn {
+    @extend .roboto-medium;
+    font-size: 15;
+}
+
+.input {
+    @extend .roboto-regular;
+    font-size: 16;
+}
+
+TextField {
+  @extend .roboto-regular;
+  font-size: 16;
+}
