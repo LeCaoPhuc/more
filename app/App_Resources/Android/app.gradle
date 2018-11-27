@@ -4,13 +4,22 @@
 //dependencies {
 //	compile 'com.android.support:recyclerview-v7:+'
 //}
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+    }
+}
 
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "com.innoria.smartcare"  
+    applicationId = "com.innoria.moretarget"  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  
   }  
+    project.ext {
+        googlePlayServicesVersion = "15.0.0"
+    }
 } 

@@ -54,14 +54,21 @@ export class HomeComponent implements OnInit {
             application.android.startActivity.getWindow().setStatusBarColor(new Color(config.application.STATUS_COLOR).android);
         }
         this.firebaseService.initFireBase({
-            onMessageReceivedCallback: function (message: Message) {
-                console.log("success firebase : ", message);
+            onMessageReceivedCallback: function (message: any) {
                 alert(message.body);
+                if (message && message.body) {
+                    console.log("success firebase : ", message)
+                    // alert(message.body);
+                }
+                else {
+                    console.log("undefined body callback firebase,", message);
+                    // alert("undefined body callback firebase");
+                }
             },
             onPushTokenReceivedCallback: function (token: string) {
                 console.log("receive token", token);
             }
-        });
+        })
     }
 
     ngAfterViewInit() {

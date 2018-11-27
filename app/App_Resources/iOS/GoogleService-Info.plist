@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>73831114664-8co29e7kfh27tkgmfgvcqsburq2pebhf.apps.googleusercontent.com</string>
+	<string>835828207040-s81tugociu52ncop4h36b886n0qjip27.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.73831114664-8co29e7kfh27tkgmfgvcqsburq2pebhf</string>
+	<string>com.googleusercontent.apps.835828207040-s81tugociu52ncop4h36b886n0qjip27</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAorx-AbX0aQLmBII1E-LxWFU1AONgeIeo</string>
+	<string>AIzaSyDoA38apqTW2tK4EywHagFFEuy-rMggWJ0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>73831114664</string>
+	<string>835828207040</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.innoria.smartcare</string>
+	<string>com.innoria.moretarget</string>
 	<key>PROJECT_ID</key>
-	<string>smartcare-96593</string>
+	<string>moretarget-20aac</string>
 	<key>STORAGE_BUCKET</key>
-	<string>smartcare-96593.appspot.com</string>
+	<string>moretarget-20aac.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:73831114664:ios:1397daa378818580</string>
+	<string>1:835828207040:ios:0ca82abe968f5c84</string>
 	<key>DATABASE_URL</key>
-	<string>https://smartcare-96593.firebaseio.com</string>
+	<string>https://moretarget-20aac.firebaseio.com</string>
 </dict>
 </plist>
