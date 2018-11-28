@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, Injectable, ChangeDetectorRef } from "@angular/core";
 import * as moment from 'moment';
 import { TranslateService } from "@ngx-translate/core";
-import { ShareDataService, SideDrawerService, OdooSDKService, LocalStorageService, FirebaseService, MultiLanguageService } from "~/shared";
+import { ShareDataService, SideDrawerService, OdooService, LocalStorageService, FirebaseService, MultiLanguageService } from "~/shared";
 import { Http } from "@angular/http";
 import { Page, Color } from "tns-core-modules/ui/page/page";
 import * as utils from "utils/utils";
@@ -14,6 +14,8 @@ import * as app from "tns-core-modules/application";
 import { ObservableArray } from "tns-core-modules/data/observable-array/observable-array";
 import { showLoadingIndicator, hideLoadingIndicator } from "~/utils";
 import { Message } from "nativescript-plugin-firebase";
+import { OdooClient } from "nativescript-odoo/odoo-api/odoo-client";
+import * as fresco from "nativescript-fresco";
 @Component({
     selector: "ns-home",
     moduleId: module.id,
@@ -21,7 +23,9 @@ import { Message } from "nativescript-plugin-firebase";
     styleUrls: ["./home.scss"],
 })
 export class HomeComponent implements OnInit {
+    public src = 'http://images6.fanpop.com/image/photos/40900000/Achilles-And-Atalanta-Rider-And-Archer-Of-Red-fate-series-40902994-1000-625.jpg';
     public frame = frame;
+    public odooClient: OdooClient;
     private drawer: RadSideDrawer;
     public dataItems: ObservableArray<any>;
     constructor(
@@ -31,7 +35,7 @@ export class HomeComponent implements OnInit {
         public multiLanguageService: MultiLanguageService,
         public changeDetectorRef: ChangeDetectorRef,
         public localStorageService: LocalStorageService,
-        public odooSDKService: OdooSDKService,
+        public odooService: OdooService,
         public firebaseService: FirebaseService,
         public http: Http,
         public page: Page
@@ -43,6 +47,7 @@ export class HomeComponent implements OnInit {
                 name: "atalanta" + i
             });
         }
+        this.odooClient = OdooClient.getInstance();
     }
 
     ngOnInit(): void {
@@ -90,17 +95,33 @@ export class HomeComponent implements OnInit {
         // showLoadingIndicator();
         let self = this;
         let serverUrl = 'https://odev.innoria.com';
-        this.odooSDKService.getDbList(serverUrl)
-            .then((data: Array<string>) => {
-                console.log("----onServerUrlInputBlur - getDbList: ", data);
-                self.localStorageService.set("config", {
-                    dbName: data[3],
-                    serverUrl: serverUrl
-                });
-            })
-            .catch((error) => {
-                console.log("----onServerUrlInputBlur - getDbList error: ", error);
-            });
+        let databaseName = 'odev.woodstock';
+        this.odooClient.setServerUrl(serverUrl).connect({
+            onConnectSuccess: function (versionInfo) {
+                console.log("versionInfo ", versionInfo);
+                self.odooService.setDatabaseName(databaseName);
+                self.odooService.setServerUrl(serverUrl);
+                self.odooClient.authenticate("admin", "Anything123", self.odooService.getDatabaseName())
+                    .then((user: any) => {
+                        console.log("isAvailableServerUrlAndDatabase ", self.odooService.isAvailableServerUrlAndDatabase())
+                        console.log("setSessionId  ", self.odooClient.getSessionId());
+                        if (user.username) {
+                            console.log("---login user: ", user);
+                        }
+                        else {
+                            console.log("undefined username");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            },
+            onConnectError: function (err) {
+                console.log(err);
+            }
+        })
+
+
         // setTimeout(function () {
         //     hideLoadingIndicator();
         // }, 1000)
@@ -108,7 +129,6 @@ export class HomeComponent implements OnInit {
 
     onTapLogin(args) {
         console.log("onTapLogin");
-
         // this.odooSDKService.login("admin", "smartcare@123")
         //     .then(function (res) {
         //         console.log(res);

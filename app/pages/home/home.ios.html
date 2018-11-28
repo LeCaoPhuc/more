@@ -14,11 +14,16 @@
                 <Label text="ConnectDataBase" class="btn" (tap)="onTap($event)"></Label>
             </StackLayout>
         </StackLayout>
+        <GridLayout rows="*,*" columns="*,*">
+            <!-- <StackLayout image-cmp [src]="src" placeholderImageUri="res://logo">
 
-        <!-- <Button text="Login" (tap)="onTapLogin($event)"></Button> -->
+            </StackLayout> -->
+            <FrescoDrawee imageUri="http://images6.fanpop.com/image/photos/40900000/Achilles-And-Atalanta-Rider-And-Archer-Of-Red-fate-series-40902994-1000-625.jpg"
+                width="200" height="200" placeholderImageUri="res://logo" stretch="aspectFill"></FrescoDrawee>
+        </GridLayout>
+        <Button text="Login" (tap)="onTapLogin($event)"></Button>
         <TextField hint="asdasdasd" text=""></TextField>
-        <FrescoDrawee imageUri="http://images6.fanpop.com/image/photos/40900000/Achilles-And-Atalanta-Rider-And-Archer-Of-Red-fate-series-40902994-1000-625.jpg"
-            width="200" height="200" placeholderImageUri="res://logo" stretch="aspectFill"></FrescoDrawee>
+
         <GridLayout rows="*" columns="*">
             <PullToRefresh (refresh)="refreshList($event)">
                 <ListView [items]="dataItems">

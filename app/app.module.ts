@@ -10,6 +10,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { registerElement } from "nativescript-angular/element-registry";
 registerElement("PullToRefresh", () => require("nativescript-pulltorefresh").PullToRefresh);
+// registerElement('ImageCacheIt', () => require('nativescript-image-cache-it').ImageCacheIt);
 
 @NgModule({
     bootstrap: [
