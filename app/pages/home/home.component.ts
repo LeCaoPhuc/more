@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, Injectable, ChangeDetectorRef } from "@angular/core";
 import * as moment from 'moment';
 import { TranslateService } from "@ngx-translate/core";
-import { ShareDataService, SideDrawerService, OdooService, LocalStorageService, FirebaseService, MultiLanguageService } from "~/shared";
+import { ShareDataService, SideDrawerService, OdooService, LocalStorageService, FirebaseService, MultiLanguageService,FacebookService } from "~/shared";
 import { Http } from "@angular/http";
 import { Page, Color } from "tns-core-modules/ui/page/page";
 import * as utils from "utils/utils";
@@ -13,7 +13,7 @@ import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 import * as app from "tns-core-modules/application";
 import { ObservableArray } from "tns-core-modules/data/observable-array/observable-array";
 import { showLoadingIndicator, hideLoadingIndicator } from "~/utils";
-import { Message } from "nativescript-plugin-firebase";
+// import { Message } from "nativescript-plugin-firebase";
 import { OdooClient } from "nativescript-odoo/odoo-api/odoo-client";
 import * as fresco from "nativescript-fresco";
 @Component({
@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit {
         public localStorageService: LocalStorageService,
         public odooService: OdooService,
         public firebaseService: FirebaseService,
+        public facebookService: FacebookService,
         public http: Http,
         public page: Page
     ) {
@@ -60,7 +61,7 @@ export class HomeComponent implements OnInit {
         }
         this.firebaseService.initFireBase({
             onMessageReceivedCallback: function (message: any) {
-                alert(message.body);
+                // alert(message.body);
                 if (message && message.body) {
                     console.log("success firebase : ", message)
                     // alert(message.body);
@@ -129,13 +130,13 @@ export class HomeComponent implements OnInit {
 
     onTapLogin(args) {
         console.log("onTapLogin");
-        // this.odooSDKService.login("admin", "smartcare@123")
-        //     .then(function (res) {
-        //         console.log(res);
-        //     })
-        //     .catch(function (err) {
-        //         console.log(err);
-        //     })
+        this.facebookService.logIn()
+            .then(function (res) {
+                console.log(res);
+            })
+            .catch(function (err) {
+                console.log(err);
+            })
     }
     public openDrawer(args) {
         console.log("openDreaw");

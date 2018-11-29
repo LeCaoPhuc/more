@@ -12,7 +12,7 @@ import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 import { ShareDataService } from '~/shared/services';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
-import { SideDrawerService, MultiLanguageService, OdooService, LocalStorageService, FirebaseService } from "./services";
+import { SideDrawerService, MultiLanguageService, OdooService, LocalStorageService, FacebookService, FirebaseService } from "./services";
 import { NgShadowModule } from "nativescript-ngx-shadow";
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, "/assets/i18n/", ".json");
@@ -42,7 +42,8 @@ export function createTranslateLoader(http: HttpClient) {
         MultiLanguageService,
         OdooService,
         LocalStorageService,
-        FirebaseService
+        FirebaseService,
+        FacebookService
     ],
     exports: [
         NativeScriptModule,

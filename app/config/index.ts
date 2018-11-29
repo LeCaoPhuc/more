@@ -9,7 +9,9 @@ export let config = {
         getDBList: '/web/database/list',
     },
     application: {
-        "APP_NAME": "PNEWS",
-        "STATUS_COLOR": "#8E24AA"
+        APP_NAME: "PNEWS",
+        STATUS_COLOR: "#8E24AA",
+        FACEBOOK_API_URL: "https://graph.facebook.com/v3.1",
+        FACEBOOK_ID: "1926025767450787",
     }
 };

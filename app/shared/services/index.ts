@@ -4,3 +4,4 @@ export * from "./multi-language-service/multi-language.service";
 export * from "./odoo-service/odoo.service";
 export * from "./local-storage-service/local-storage.service";
 export * from "./firebase-service/firebase.service";
+export * from "./facebook-service/facebook.service";
