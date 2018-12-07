@@ -5,8 +5,7 @@
 $materialGray100: #F5F5F5;
 $materialGray200: #EEEEEE;
 $materialGray300: #E0E0E0;
-$materialGray400: #BDBDBD;
-$materialGray500: #9E9E9E;
+$materialGray400: #BDBDBD;$materialGray500: #9E9E9E;
 $materialGray600: #757575;
 $materialGray700: #616161;
 $materialGray800: #424242;
@@ -16,17 +15,15 @@ $backgroundColor: $materialGray100;
 
 // INNORIA MATERIAL COLOR
 
-$innoriaBlue700: #138bc7;
-$innoriaBlue800: #117ab3; // white text
-$innoriaBlue900: #075b91; // white text
-
-$greenBackgroundColor700: #00866c;
+$mojoTextBlue: #45AAF2;
+$mojoTextBlueLv2: #43A6D8;
+$mojoTextBlueLv3: #007bbf; // white text
 
 // APP COLOR
 
-$primaryColor: $innoriaBlue800;
-$primaryDarkColor: $innoriaBlue900;
-$secondaryColor: $greenBackgroundColor700;
+$primaryColor: $mojoTextBlue;
+$primaryDarkColor: $mojoTextBlueLv3;
+// $secondaryColor: $greenBackgroundColor700;
 
 // PADDING - MARGIN
 $padding60: 60;
