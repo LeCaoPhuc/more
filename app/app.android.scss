@@ -72,8 +72,8 @@
 .segmented-bar {
     @extend .roboto-light;
     font-size: 13;
-    selected-background-color: $innoriaBlue700;
-    color: $innoriaBlue700;
+    selected-background-color: $mojoTextBlue;
+    color: $mojoTextBlue;
 }
 
 .list-view-empty-text {
@@ -132,7 +132,7 @@
 }
 
 .tab-view {
-    selected-tab-text-color: $innoriaBlue700;
+    selected-tab-text-color: $mojoTextBlue;
 }
 
 .tab-view {

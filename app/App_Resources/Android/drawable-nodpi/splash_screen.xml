@@ -1,8 +1,24 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="fill">
+<!-- <layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="fill">
     <item>
         <bitmap android:gravity="fill" android:src="@drawable/background" />
     </item>
     <item>
-        <bitmap android:gravity="center" android:src="@drawable/logo" />
+        <bitmap android:gravity="center" android:src="@drawable/mojo_icon" />
     </item>
+</layer-list> -->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="fill">
+    <item>
+        <bitmap android:gravity="fill" android:src="@drawable/background_login" />
+    </item>
+</layer-list>-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
+
+    <!-- The background color, preferably the same as your normal theme -->
+    <item android:drawable="@color/ns_primaryDark"/>
+
+    <!-- Your product logo - 144dp color version of your app icon -->
+    <item>
+        <bitmap android:gravity="fill" android:src="@drawable/launch_screen" />
+    </item>
+
 </layer-list>

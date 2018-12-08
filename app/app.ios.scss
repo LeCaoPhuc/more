@@ -69,7 +69,7 @@
 
 ActionBar {
     color: white;
-    background-color: $innoriaBlue800;
+    background-color: $mojoTextBlueLv2;
 }
 
 .tab-view {
@@ -82,13 +82,13 @@ ActionBar {
 }
 
 .tab-view {
-    selected-tab-text-color: $innoriaBlue700;
+    selected-tab-text-color: $mojoTextBlue;
 }
 
 .segmented-bar {
     @extend .roboto-light;
-    selected-background-color: $innoriaBlue700;
-    color: $innoriaBlue700;
+    selected-background-color: $mojoTextBlue;
+    color: $mojoTextBlue;
 }
 
 .list-view-empty-text {

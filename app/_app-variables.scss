@@ -1,30 +1,23 @@
 @import "~nativescript-theme-core/scss/light";
-
 // MATERIAL COLOR
-
 $materialGray100: #F5F5F5;
 $materialGray200: #EEEEEE;
 $materialGray300: #E0E0E0;
-$materialGray400: #BDBDBD;$materialGray500: #9E9E9E;
+$materialGray400: #BDBDBD;
+$materialGray500: #9E9E9E;
 $materialGray600: #757575;
 $materialGray700: #616161;
 $materialGray800: #424242;
 $materialGray900: #212121;
-
 $backgroundColor: $materialGray100;
-
 // INNORIA MATERIAL COLOR
-
 $mojoTextBlue: #45AAF2;
 $mojoTextBlueLv2: #43A6D8;
 $mojoTextBlueLv3: #007bbf; // white text
-
 // APP COLOR
-
 $primaryColor: $mojoTextBlue;
 $primaryDarkColor: $mojoTextBlueLv3;
 // $secondaryColor: $greenBackgroundColor700;
-
 // PADDING - MARGIN
 $padding60: 60;
 $padding52: 52;
@@ -40,7 +33,6 @@ $padding16: 16;
 $padding12: 12;
 $padding8: 8;
 $padding4: 4;
-
 // FONT SIZE ANDROID
 $fontSize36: 36;
 $fontSize30: 30;
@@ -49,20 +41,16 @@ $fontSize18: 18;
 $fontSize16: 16;
 $fontSize14: 14;
 $fontSize12: 12;
-
 // FONT SIZE IOS
 $fontSize23: 23;
 $fontSize21: 21;
 $fontSize19: 19;
 $fontSize17: 17;
 $fontSize15: 15;
-
-
 // TEXT COLOR
 $textPrimaryColor: $primaryDarkColor;
 $textDangerColor: #d50000;
 $textMutedColor: #a2a2a2;
-
 // LIST VIEW
 $listViewBackgroundColor: $backgroundColor;
 $listViewEmptyTextColor: #606060;
@@ -71,23 +59,18 @@ $listViewGroupTitleColor: #606060;
 $listViewGroupTitleFontSize: $fontSize14;
 $listViewGroupTitleTextTransform: uppercase;
 // LIST VIEW ITEM
-
 $listViewItemPrimaryContentColor: #3c3c3c;
 $listViewItemSecondaryContentColor: #BEC0C4;
 $listViewItemAccentContentColor: #3c3c3c;
-
 $textTitleColor: $primaryDarkColor;
 $textContentColor: #000000;
-
 // FORM INPUT
 $inputBorderColor: #a2a2a2;
 $inputBorderRadius: 3%;
 $inputTextColor: #000000;
-
 // BORDER COLOR
 $borderColor: #B2B2B2;
-
 // FLOATING ACTION BUTTON
 $fabWidth: $padding60;
 $fabHeight: $padding60;
-$fabBackgroundColor: $innoriaBlue700;
+$fabBackgroundColor: $mojoTextBlue;
