@@ -13,5 +13,9 @@ export let config = {
         STATUS_COLOR: "#8E24AA",
         FACEBOOK_API_URL: "https://graph.facebook.com/v3.1",
         FACEBOOK_ID: "1926025767450787",
+        NAVIGATION_TRANSITION: {
+            name: "fade",
+            duration: 400
+        }
     }
 };

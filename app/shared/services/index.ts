@@ -5,3 +5,5 @@ export * from "./odoo-service/odoo.service";
 export * from "./local-storage-service/local-storage.service";
 export * from "./firebase-service/firebase.service";
 export * from "./facebook-service/facebook.service";
+export * from "./guard-services/home-guard.service";
+export * from "./guard-services/login-guard.service";
