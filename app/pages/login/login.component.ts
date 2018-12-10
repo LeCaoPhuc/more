@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-import { OdooService, LocalStorageService, MultiLanguageService } from "~/shared/services/index";
+import { OdooService, LocalStorageService, MultiLanguageService, SideDrawerService } from "~/shared/services/index";
 import { showLoadingIndicator, hideLoadingIndicator } from "~/utils";
 import { RouterExtensions } from "nativescript-angular/router";
-// import { hideStatusBar } from "~/utils/status-bar-utils";
 import { Page } from "ui/page";
 import { RoutingPath } from "~/app-routing.module";
 import { OdooClient } from "nativescript-odoo/odoo-api/odoo-client";
@@ -18,13 +17,15 @@ import { config } from "~/config";
 
 export class LoginComponent implements OnInit {
     constructor(
-        public routerExtensions: RouterExtensions
+        public routerExtensions: RouterExtensions,
+        public sideDrawerService: SideDrawerService,
+        public page: Page
     ) {
-
+        this.page.actionBarHidden = true;
     }
 
     ngOnInit() {
-
+        // this.sideDrawerService.sideDrawer.gesturesEnabled = false;
     }
 
     onTap(args) {

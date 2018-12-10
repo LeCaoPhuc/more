@@ -11,8 +11,8 @@ export class AppComponent {
         public shareDataService: ShareDataService,
         public sideDrawerService: SideDrawerService,
     ) {
-        translate.setDefaultLang('en');
-        translate.use("en");
+        translate.setDefaultLang('vi');
+        translate.use("vi");
         sideDrawerService.init();
         shareDataService.setData("akaNoArcher", "Atalanta Alter");
 

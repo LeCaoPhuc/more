@@ -1,1 +1,45 @@
 @import "../../app-variables.scss";
+.container {
+    background-color: $materialGray300;
+}
+
+.header-layout {
+    background-color: $mojoTextBlue;
+    .logo-img-layout {
+        margin-top: $padding24;
+        border-radius: 50%;
+        background-color: white;
+        width: 80;
+        height: 80;
+        horizontal-align: center;
+        vertical-align: center;
+    }
+    .logo-img {
+        width: 40;
+        height: 40;
+    }
+}
+
+.body-layout {
+    margin: $padding24;
+    padding: $padding24;
+    border-radius: $padding8;
+    .title {
+        font-size: $fontSize18;
+        color: $mojoTextBlue;
+        margin-bottom: $padding24;
+    }
+}
+
+.input-title {
+    font-size: $fontSize12;
+}
+
+.forgot-password {
+    font-size: $fontSize12;
+    padding: $padding4;
+}
+
+.text-field {
+    width: 100%;
+}

@@ -7,7 +7,6 @@ export class SideDrawerService {
     public sideDrawer: RadSideDrawer;
 
     constructor(
-        // private changeDetectorRef: ChangeDetectorRef
     ) {
 
     }
@@ -19,7 +18,6 @@ export class SideDrawerService {
             }
             else {
                 self.sideDrawer = <RadSideDrawer>app.getRootView();
-                // self.changeDetectorRef.detectChanges();
             }
         }, 10);
     }

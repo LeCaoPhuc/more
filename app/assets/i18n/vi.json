@@ -1,0 +1,13 @@
+{
+    "HOME_SCREEN": {
+        "SUB_TITLE": "Home"
+    },
+    "LOGIN": {
+        "TITLE": "ĐĂNG NHẬP",
+        "USERNAME": "TÀI KHOẢN",
+        "PASSWORD": "MẬT KHẨU",
+        "SIGN_IN": "ĐĂNG NHẬP",
+        "SIGN_UP": "ĐĂNG KÝ",
+        "FORGOT_PASSWORD": "Quên mật khẩu ?"
+    }
+}
