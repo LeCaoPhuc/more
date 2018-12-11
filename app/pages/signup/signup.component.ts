@@ -9,34 +9,39 @@ import { OdooUser } from "nativescript-odoo/odoo-api/odoo-user";
 import { config } from "~/config";
 
 @Component({
-    selector: "login",
+    selector: "signup",
     moduleId: module.id,
-    templateUrl: "./login.html",
-    styleUrls: ["./login.scss"]
+    templateUrl: "./signup.html",
+    styleUrls: ["./signup.scss"]
 })
 
-export class LoginComponent implements OnInit {
+export class SignUpComponent implements OnInit {
     constructor(
         public routerExtensions: RouterExtensions,
         public sideDrawerService: SideDrawerService,
         public page: Page
     ) {
         this.page.actionBarHidden = true;
-        let self = this;
-        let interval = setInterval(function () {
-            if (self.sideDrawerService.sideDrawer) {
-                self.sideDrawerService.sideDrawer.gesturesEnabled = false;
-                clearInterval(interval);
-            }
-        }, 10)
     }
 
     ngOnInit() {
-        console.log("ngOnInit");
+        // this.sideDrawerService.sideDrawer.gesturesEnabled = false;
     }
 
-    onTapSignUp(args) {
-        this.routerExtensions.navigate([RoutingPath.SIGN_UP], {
+    onTap(args) {
+        this.routerExtensions.navigate([RoutingPath.HOME_SCREEN], {
+            clearHistory: true,
+            transition: config.application.NAVIGATION_TRANSITION
+        })
+    }
+
+    goBack() {
+        this.routerExtensions.back();
+    }
+
+    onTapSignIn() {
+        this.routerExtensions.navigate([RoutingPath.LOGIN_SCREEN], {
+            clearHistory: true,
             transition: config.application.NAVIGATION_TRANSITION
         })
     }

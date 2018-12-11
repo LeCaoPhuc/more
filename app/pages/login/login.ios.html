@@ -1,12 +1,11 @@
-<GridLayout rows="*,*,*,*,*,*" columns="*" class="container">
-    <StackLayout row="0" rowSpan="2" class="header-layout">
-        <StackLayout class="logo-img-layout">
+<GridLayout rows="*,*,*,7*,*" columns="*" class="container">
+    <GridLayout rows="*,*,*" columns="*" row="0" rowSpan="3" class="header-layout">
+        <StackLayout row="0" rowSpan="2" class="logo-img-layout">
             <Image src="res://mojo_icon" class="logo-img"></Image>
         </StackLayout>
-    </StackLayout>
-    <StackLayout row="1" rowSpan="4">
-        <StackLayout class="body-layout" shadow elevation="4" height="100%">
-
+    </GridLayout>
+    <StackLayout row="2" rowSpan="2">
+        <StackLayout class="body-layout" shadow elevation="4">
             <Label [text]="'LOGIN.TITLE' | translate" class="title font-weight-bold text-center" textWrap="true"></Label>
 
             <FlexboxLayout flexDirection="column" justifyContent="space-around" width="100%" height="100%" class="form">
@@ -23,8 +22,12 @@
 
                 <Button [text]="'LOGIN.SIGN_IN' | translate" class="btn btn-primary btn-rounded-lg"></Button>
 
-                <Button [text]="'LOGIN.SIGN_IN_FACEBOOK' | translate" class="btn btn-primary btn-rounded-lg"></Button>
+                <FlexboxLayout justifyContent="space-around" alignItems="center" class="btn btn-primary btn-rounded-lg">
+                    <Label [text]="'fa-facebook' | fonticon" class="fa t-14" textWrap="true"></Label>
+                    <Label [text]="'LOGIN.SIGN_IN_FACEBOOK' | translate" textWrap="true"></Label>
+                </FlexboxLayout>
             </FlexboxLayout>
+
         </StackLayout>
     </StackLayout>
 </GridLayout>

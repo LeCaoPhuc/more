@@ -26,7 +26,8 @@ export function createTranslateLoader(http: HttpClient) {
         NativeScriptHttpClientModule,
         NgShadowModule,
         TNSFontIconModule.forRoot({
-            'mdi': 'fonts/material-design-icons.css'
+            'mdi': 'fonts/material-design-icons.css',
+            'fa': 'fonts/font-awesome.css',
         }),
         TranslateModule.forRoot({
             loader: {

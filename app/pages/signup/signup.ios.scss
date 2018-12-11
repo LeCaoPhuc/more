@@ -6,7 +6,6 @@
 .header-layout {
     background-color: $mojoTextBlue;
     .logo-img-layout {
-        // margin-top: $padding24;
         border-radius: 50%;
         background-color: white;
         width: 80;
@@ -24,9 +23,10 @@
     margin: 0 $padding24 0 $padding24;
     padding: $padding24;
     border-radius: $padding8;
+    background-color: white;
     .title {
         font-size: $fontSize18;
-        color: $mojoTextBlueLv3;
+        color: $mojoTextBlue;
         margin-bottom: $padding24;
     }
 }
@@ -35,11 +35,21 @@
     font-size: $fontSize12;
 }
 
-.forgot-password {
+.sign-in {
     font-size: $fontSize12;
     padding: $padding4;
+    color: $mojoTextBlue;
 }
 
 .text-field {
     width: 100%;
+    color: black;
+    padding-left: $padding12;
+    padding-top: $padding12;
+    padding-bottom: $padding12;
+}
+
+.error-message-layout {
+    margin: 0 0 $padding4 0;
+    font-size: $fontSize12;
 }

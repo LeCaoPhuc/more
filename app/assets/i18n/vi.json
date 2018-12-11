@@ -3,12 +3,22 @@
         "SUB_TITLE": "Home"
     },
     "LOGIN": {
-        "TITLE": "ĐĂNG NHẬP",
-        "USERNAME": "TÀI KHOẢN",
+        "FORGOT_PASSWORD": "Quên mật khẩu ?",
         "PASSWORD": "MẬT KHẨU",
         "SIGN_IN": "ĐĂNG NHẬP",
         "SIGN_IN_FACEBOOK": "ĐĂNG NHẬP VỚI FACEBOOK",
         "SIGN_UP": "Đăng ký",
-        "FORGOT_PASSWORD": "Quên mật khẩu ?"
+        "TITLE": "ĐĂNG NHẬP",
+        "USERNAME": "TÀI KHOẢN"
+    },
+    "SIGNUP": {
+        "CONFIRM_PASSWORD": "XÁC NHẬN MẬT KHẨU",
+        "EMAIL": "EMAIL",
+        "FULL_NAME": "HỌ TÊN",
+        "PASSWORD": "MẬT KHẨU",
+        "SIGN_IN": "Đăng nhập!",
+        "SIGN_IN_TEXT": "Bạn đã có tài khoản ?",
+        "SIGN_UP": "ĐĂNG KÝ",
+        "TITLE": "ĐĂNG KÝ"
     }
 }

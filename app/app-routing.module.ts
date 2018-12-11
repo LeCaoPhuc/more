@@ -7,6 +7,7 @@ import { LoginComponent } from "~/pages/login/login.component";
 export class RoutingPath {
     public static LOGIN_SCREEN = "login";
     public static HOME_SCREEN = "home";
+    public static SIGN_UP = "signup";
 }
 
 const routes: Routes = [

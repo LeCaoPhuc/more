@@ -13,7 +13,7 @@
 }
 
 .segmented-bar {
-    selected-background-color: $primaryColor;
+    selected-background-color: $primaryDarkColor;
 }
 
 .segmented-bar {
@@ -64,23 +64,28 @@
     border-radius: 5;
 }
 
-.page label.text-primary, .tab-view label.text-primary {
+.page label.text-primary,
+.tab-view label.text-primary {
     color: $primaryDarkColor;
 }
 
-.page label.bg-primary, .tab-view label.bg-primary {
+.page label.bg-primary,
+.tab-view label.bg-primary {
     background-color: $primaryDarkColor;
 }
 
-.page label.text-danger, .tab-view label.text-danger {
+.page label.text-danger,
+.tab-view label.text-danger {
     color: #d50000;
 }
 
-.page label.bg-danger, .tab-view label.bg-danger {
+.page label.bg-danger,
+.tab-view label.bg-danger {
     background-color: #d50000;
 }
 
-.page label.text-muted, .tab-view label.text-muted {
+.page label.text-muted,
+.tab-view label.text-muted {
     color: #a2a2a2;
 }
 
@@ -89,62 +94,61 @@
 }
 
 .btn-primary {
-    background-color: $primaryColor;
+    background-color: $primaryDarkColor;
 }
 
 .btn-primary {
-    border-color: $primaryColor;
+    border-color: $primaryDarkColor;
 }
 
 .btn-primary {
-color: #ffffff;
+    color: #ffffff;
 }
 
 .btn-outline {
-border-color: $primaryDarkColor;
+    border-color: $primaryDarkColor;
 }
 
 .btn-outline {
-background-color: transparent;
+    background-color: transparent;
 }
 
 .btn-outline {
-border-width: 1;
+    border-width: 1;
 }
 
 .btn-outline {
-color: $primaryColor;
+    color: $primaryColor;
 }
 
 .btn[isEnabled=false] {
-background-color: $primaryColor;
+    background-color: $primaryDarkColor;
 }
 
 .btn[isEnabled=false] {
-border-color: $primaryColor;
+    border-color: $primaryDarkColor;
 }
 
 .btn[isEnabled=false] {
-color: $mojoTextBlue;
-
+    color: $mojoTextBlue;
 }
 
 .btn-rounded-sm {
-border-radius: 4;
+    border-radius: 4;
 }
 
 .btn-rounded-lg {
-border-radius: 20;
+    border-radius: 20;
 }
 
 .label {
-font-size: 16;
+    font-size: 16;
 }
 
 .input {
-font-size: 16;
+    font-size: 16;
 }
 
 .input-rounded {
-border-radius: 30;
+    border-radius: 30;
 }

@@ -3,6 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { TNSFrescoModule } from "nativescript-fresco/angular";
 import { HomeModule } from "./pages/home/home.module";
 import { LoginModule } from "./pages/login/login.module";
+import { SignUpModule } from "./pages/signup/signup.module";
 import {
     SharedModule,
     LeftMenuModule
@@ -24,6 +25,7 @@ registerElement("Gradient", () => require("nativescript-gradient").Gradient);
         SharedModule,
         HomeModule,
         LoginModule,
+        SignUpModule,
         LeftMenuModule,
         TNSFrescoModule
     ],
