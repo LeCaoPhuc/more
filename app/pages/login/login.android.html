@@ -14,11 +14,14 @@
             <Label [text]="'LOGIN.PASSWORD' | translate" textWrap="true" class="input-title"></Label>
             <TextField hint="" text="" class="text-field" secure="true"></TextField>
 
-            <Label alignSelf="flex-end" [text]="'LOGIN.FORGOT_PASSWORD' | translate" textWrap="true" class="forgot-password font-weight-bold"></Label>
+            <FlexboxLayout width="100%" justifyContent="space-between">
+                <Label [text]="'LOGIN.SIGN_UP' | translate" textWrap="true" (tap)="onTapSignUp($event)" class="forgot-password font-weight-bold"></Label>
+                <Label [text]="'LOGIN.FORGOT_PASSWORD' | translate" textWrap="true" class="forgot-password font-weight-bold"></Label>
+            </FlexboxLayout>
 
             <Button [text]="'LOGIN.SIGN_IN' | translate" class="btn btn-primary btn-rounded-lg"></Button>
 
-            <Button [text]="'LOGIN.SIGN_UP' | translate" class="btn btn-primary btn-rounded-lg"></Button>
+            <Button [text]="'LOGIN.SIGN_IN_FACEBOOK' | translate" class="btn btn-primary btn-rounded-lg"></Button>
         </FlexboxLayout>
 
     </StackLayout>

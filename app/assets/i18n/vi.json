@@ -7,7 +7,8 @@
         "USERNAME": "TÀI KHOẢN",
         "PASSWORD": "MẬT KHẨU",
         "SIGN_IN": "ĐĂNG NHẬP",
-        "SIGN_UP": "ĐĂNG KÝ",
+        "SIGN_IN_FACEBOOK": "ĐĂNG NHẬP VỚI FACEBOOK",
+        "SIGN_UP": "Đăng ký",
         "FORGOT_PASSWORD": "Quên mật khẩu ?"
     }
 }

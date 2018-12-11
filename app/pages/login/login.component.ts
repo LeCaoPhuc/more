@@ -22,14 +22,21 @@ export class LoginComponent implements OnInit {
         public page: Page
     ) {
         this.page.actionBarHidden = true;
+        let self = this;
+        let interval = setInterval(function () {
+            if (self.sideDrawerService.sideDrawer) {
+                self.sideDrawerService.sideDrawer.gesturesEnabled = false;
+                clearInterval(interval);
+            }
+        }, 10)
     }
 
     ngOnInit() {
-        // this.sideDrawerService.sideDrawer.gesturesEnabled = false;
+        console.log("ngOnInit");
     }
 
-    onTap(args) {
-        this.routerExtensions.navigate([RoutingPath.HOME_SCREEN], {
+    onTapSignUp(args) {
+        this.routerExtensions.navigate([RoutingPath.SIGN_UP], {
             clearHistory: true,
             transition: config.application.NAVIGATION_TRANSITION
         })
