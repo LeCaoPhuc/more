@@ -1,0 +1,10 @@
+<FlexboxLayout *ngIf="model && errorMessage && model.errors && model.touched">
+    <Label *ngIf="errorMessage.general; else nonGeneral;" [text]="errorMessage.general" textWrap="true" class="error-message"></Label>
+    <ng-template #nonGeneral>
+        <Label *ngIf="model.errors.required" [text]="errorMessage.required" textWrap="true" class="error-message"></Label>
+        <Label *ngIf="model.errors.minLength" [text]="errorMessage.minLength" textWrap="true" class="error-message"></Label>
+        <Label *ngIf="model.errors.maxLength" [text]="errorMessage.maxLength" textWrap="true" class="error-message"></Label>
+        <Label *ngIf="model.errors.pattern" [text]="errorMessage.pattern" textWrap="true" class="error-message"></Label>
+    </ng-template>
+</FlexboxLayout>
+<!-- <Label text="213123126312563256321567" textWrap="true"></Label> -->

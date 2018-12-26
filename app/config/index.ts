@@ -9,13 +9,14 @@ export let config = {
         getDBList: '/web/database/list',
     },
     application: {
-        APP_NAME: "PNEWS",
-        STATUS_COLOR: "#8E24AA",
+        APP_NAME: "MOJO",
         FACEBOOK_API_URL: "https://graph.facebook.com/v3.1",
         FACEBOOK_ID: "1926025767450787",
         NAVIGATION_TRANSITION: {
             name: "fade",
             duration: 400
-        }
+        },
+        SERVER_URL: "https://odev.innoria.com",
+        DATABASE_NAME: "vietthaiphattb",
     }
 };

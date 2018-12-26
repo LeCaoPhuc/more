@@ -26,7 +26,7 @@
                 <Button [text]="'SIGNUP.SIGN_UP' | translate" class="btn btn-primary btn-rounded-lg"></Button>
                 <FlexboxLayout width="100%" justifyContent="center">
                     <Label [text]="'SIGNUP.SIGN_IN_TEXT' | translate" textWrap="true" class="input-title"></Label>
-                    <Label [text]="'SIGNUP.SIGN_IN' | translate" textWrap="true" class="sign-in font-weight-bold "></Label>
+                    <Label [text]="'SIGNUP.SIGN_IN' | translate" textWrap="true" (tap)="onTapSignIn($event)" class="sign-in font-weight-bold "></Label>
                 </FlexboxLayout>
 
             </FlexboxLayout>

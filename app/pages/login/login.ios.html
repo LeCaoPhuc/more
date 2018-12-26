@@ -8,23 +8,30 @@
         <StackLayout class="body-layout" shadow elevation="4">
             <Label [text]="'LOGIN.TITLE' | translate" class="title font-weight-bold text-center" textWrap="true"></Label>
 
-            <FlexboxLayout flexDirection="column" justifyContent="space-around" width="100%" height="100%" class="form">
+            <FlexboxLayout flexDirection="column" justifyContent="center" width="100%" height="100%" class="form">
                 <Label [text]="'LOGIN.USERNAME' | translate" textWrap="true" class="input-title"></Label>
-                <TextField hint="" text="" class="input input-border text-field"></TextField>
+                <TextField #username="ngModel" class="input input-border text-field" [(ngModel)]="dataLogin.username.value" keyboardType="email"
+                    autocapitalizationType="none" required [maxLength]="dataLogin.username.maxLength"></TextField>
+                <FlexboxLayout alignSelf="flex-start" class="error-message-layout">
+                    <error-message [model]="username" [errorMessage]="dataLogin.username.errorMessage"></error-message>
+                </FlexboxLayout>
 
                 <Label [text]="'LOGIN.PASSWORD' | translate" textWrap="true" class="input-title"></Label>
-                <TextField hint="" text="" class="input input-border text-field" secure="true"></TextField>
-
+                <TextField #password="ngModel" class="input input-border text-field" secure="true" [(ngModel)]="dataLogin.password.value"
+                    autocapitalizationType="none" required [maxLength]="dataLogin.password.maxLength"></TextField>
+                <FlexboxLayout alignSelf="flex-start" class="error-message-layout">
+                    <error-message [model]="password" [errorMessage]="dataLogin.password.errorMessage"></error-message>
+                </FlexboxLayout>
                 <FlexboxLayout width="100%" justifyContent="space-between">
                     <Label [text]="'LOGIN.SIGN_UP' | translate" textWrap="true" (tap)="onTapSignUp($event)" class="forgot-password font-weight-bold"></Label>
                     <Label [text]="'LOGIN.FORGOT_PASSWORD' | translate" textWrap="true" class="forgot-password font-weight-bold"></Label>
                 </FlexboxLayout>
 
-                <Button [text]="'LOGIN.SIGN_IN' | translate" class="btn btn-primary btn-rounded-lg"></Button>
+                <Button [text]="'LOGIN.SIGN_IN' | translate" (tap)="onTapLogin($event)" class="btn btn-primary btn-rounded-lg"></Button>
 
                 <FlexboxLayout justifyContent="space-around" alignItems="center" class="btn btn-primary btn-rounded-lg">
                     <Label [text]="'fa-facebook' | fonticon" class="fa t-14" textWrap="true"></Label>
-                    <Label [text]="'LOGIN.SIGN_IN_FACEBOOK' | translate" textWrap="true"></Label>
+                    <Label [text]="'LOGIN.SIGN_IN_FACEBOOK' | translate" textWrap="true" (tap)="onFacebookLoginTap($event)"></Label>
                 </FlexboxLayout>
             </FlexboxLayout>
 

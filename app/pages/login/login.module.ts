@@ -4,11 +4,13 @@ import { LoginComponent } from "./login.component";
 import { LoginGuard } from "~/shared/services/guard-services/login-guard.service";
 import { SharedModule } from "~/shared/shared.module";
 import { LoginRoutingModule } from "./login.routing";
+import { ErrorMessageModule } from "~/shared/modules";
 
 @NgModule({
     imports: [
         SharedModule,
-        LoginRoutingModule
+        LoginRoutingModule,
+        ErrorMessageModule
     ],
     declarations: [
         LoginComponent

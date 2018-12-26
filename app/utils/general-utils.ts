@@ -1,6 +1,7 @@
 import * as connectivity from "connectivity";
 import * as Toast from "nativescript-toast";
 import * as application from "application";
+import { SnackBar } from "nativescript-snackbar";
 const LoadingIndicator = require("nativescript-loading-indicator").LoadingIndicator;
 const loadingIndicator = new LoadingIndicator();
 const loadingIndicatorOptions = {
@@ -36,3 +37,7 @@ export function hideLoadingIndicator() {
     loadingIndicator.hide();
 }
 
+export function showSnackBar(message: string) {
+    let snackBar = new SnackBar();
+    snackBar.simple(message);
+}

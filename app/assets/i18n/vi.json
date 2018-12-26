@@ -1,6 +1,6 @@
 {
     "HOME_SCREEN": {
-        "SUB_TITLE": "Home"
+        "TITLE": "MOJO"
     },
     "LOGIN": {
         "FORGOT_PASSWORD": "Quên mật khẩu ?",
@@ -9,7 +9,13 @@
         "SIGN_IN_FACEBOOK": "ĐĂNG NHẬP VỚI FACEBOOK",
         "SIGN_UP": "Đăng ký",
         "TITLE": "ĐĂNG NHẬP",
-        "USERNAME": "TÀI KHOẢN"
+        "USERNAME": "TÀI KHOẢN",
+        "ERROR_MESSAGE": {
+            "WRONG_USERNAME_PASSWORD": "Sai tài khoản hoặc mật khẩu !",
+            "USERNAME_REQUIRE": "Vui lòng nhập tài khoản",
+            "PASSWORD_REQUIRE": "Vui lòng nhập mật khẩu",
+            "SERVER_ERROR": "Lỗi khi kết nối server"
+        }
     },
     "SIGNUP": {
         "CONFIRM_PASSWORD": "XÁC NHẬN MẬT KHẨU",

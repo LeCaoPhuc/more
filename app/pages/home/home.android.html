@@ -1,39 +1,9 @@
-<StackLayout>
-
-    <ActionBar class="action-bar">
-        <Gradient direction="to right" colors="#FF4542, #FF5EAF">
-            <GridLayout columns="50, * ,50" rows="auto" width="100%">
-                <Label col="0" [text]="'mdi-menu' | fonticon" class="mdi menu-icon" verticalAlignment="center" textWrap="true" (tap)="openDrawer($event)"></Label>
-                <StackLayout col="1" col="1" orientation="horizontal" horizontalAlignment="center">
-                    <Image height="30" src="~/assets/mojo_logo.png"></Image>
-                </StackLayout>
-            </GridLayout>
-        </Gradient>
-    </ActionBar>
-
-
-
-    <StackLayout height="500" width="100%">
-
-        <StackLayout shadow elevation="4" padding="10">
-            <Button text="ConnectDataBase" class="btn" (tap)="onTap($event)"></Button>
-            <!-- <StackLayout image-cmp [src]="src" placeholderImageUri="res://logo">
-
-                    </StackLayout> -->
-            <FrescoDrawee imageUri="http://images6.fanpop.com/image/photos/40900000/Achilles-And-Atalanta-Rider-And-Archer-Of-Red-fate-series-40902994-1000-625.jpg"
-                width="200" height="200" placeholderImageUri="res://logo" stretch="aspectFill"></FrescoDrawee>
-        </StackLayout>
-        <Button text="Login" (tap)="onTapLogin($event)"></Button>
-
-        <TextField hint="asdasdasd" text=""></TextField>
-        <!-- <FrescoDrawee imageUri="http://images6.fanpop.com/image/photos/40900000/Achilles-And-Atalanta-Rider-And-Archer-Of-Red-fate-series-40902994-1000-625.jpg"
-            width="200" height="200" placeholderImageUri="res://logo" stretch="aspectFill"></FrescoDrawee> -->
-        <!-- <GridLayout rows="*" columns="*">
-            <RadListView [items]="dataItems">
-                <ng-template tkListItemTemplate let-item="item">
-                    <news-item></news-item>
-                </ng-template>
-            </RadListView>
-        </GridLayout> -->
-    </StackLayout>
-</StackLayout>
+<ActionBar [title]="'HOME_SCREEN.TITLE' | translate" class="action-bar"></ActionBar>
+<GridLayout rows="*" columns="*">
+    <Label horizontalAlignment="center" verticalAlignment="center" textWrap="true" (tap)="onTapLogOut($event)">
+        <FormattedString>
+            <Span text="This page was empty "></Span>
+            <Span text="Logout! " color="#0000ff" fontAttributes="Bold"></Span>
+        </FormattedString>
+    </Label>
+</GridLayout>

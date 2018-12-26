@@ -47,23 +47,27 @@ export class FacebookService {
 
     getUserFacebookInfo() {
         let self = this;
-        http.getJSON(config.application.FACEBOOK_API_URL + "/me?access_token=" + self.fbToken).then((res) => {
-            if (res) {
-                Promise.resolve({
-                    userFullName: res["name"],
-                    userId: res["id"]
+        return new Promise(function (resolve, reject) {
+            http.getJSON(config.application.FACEBOOK_API_URL + "/me?access_token=" + self.fbToken).then((res) => {
+                if (res) {
+                    console.log("res ", res);
+                    resolve({
+                        userFullName: res["name"],
+                        userId: res["id"]
+                    })
+                }
+                else {
+                    reject({
+                        message: self.multiLanguageService.get("ERROR_MESSAGE_GENERAL.USER_FB_INFO_NULL")
+                    })
+                }
+            }, function (err) {
+                reject({
+                    message: self.multiLanguageService.get("ERROR_MESSAGE_GENERAL.GET_DATA_FB_ERROR")
                 })
-            }
-            else {
-                Promise.reject({
-                    message: self.multiLanguageService.get("ERROR_MESSAGE_GENERAL.USER_FB_INFO_NULL")
-                })
-            }
-        }, function (err) {
-            Promise.reject({
-                message: self.multiLanguageService.get("ERROR_MESSAGE_GENERAL.GET_DATA_FB_ERROR")
-            })
-        });
+            });
+        })
+
     }
 
     getFbAvatar(userId: string) {

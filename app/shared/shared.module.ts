@@ -9,7 +9,7 @@ import { HttpClient } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
-import { ShareDataService } from '~/shared/services';
+import { ShareDataService, UserService } from '~/shared/services';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 import { SideDrawerService, MultiLanguageService, OdooService, LocalStorageService, FacebookService, FirebaseService } from "./services";
@@ -44,7 +44,8 @@ export function createTranslateLoader(http: HttpClient) {
         OdooService,
         LocalStorageService,
         FirebaseService,
-        FacebookService
+        FacebookService,
+        UserService
     ],
     exports: [
         NativeScriptModule,

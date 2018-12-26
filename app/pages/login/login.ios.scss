@@ -34,11 +34,13 @@
 
 .input-title {
     font-size: $fontSize12;
+    margin-bottom: $padding4;
 }
 
 .forgot-password {
     font-size: $fontSize12;
     padding: $padding4;
+    margin-bottom: $padding8;
 }
 
 .text-field {
@@ -47,4 +49,14 @@
     padding-left: $padding12;
     padding-top: $padding12;
     padding-bottom: $padding12;
+    margin-bottom: $padding8
+}
+
+.btn {
+    margin-bottom: $padding16;
+}
+
+.error-message-layout {
+    margin: 0 0 $padding4 0;
+    font-size: $fontSize12;
 }

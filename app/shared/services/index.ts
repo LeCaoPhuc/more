@@ -7,3 +7,4 @@ export * from "./firebase-service/firebase.service";
 export * from "./facebook-service/facebook.service";
 export * from "./guard-services/home-guard.service";
 export * from "./guard-services/login-guard.service";
+export * from "./user-services/user.service";
