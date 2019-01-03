@@ -16,7 +16,7 @@ export let config = {
             name: "fade",
             duration: 400
         },
-        SERVER_URL: "https://odev.innoria.com",
-        DATABASE_NAME: "vietthaiphattb",
+        SERVER_URL: "http://192.168.1.162:8069",
+        DATABASE_NAME: "moretarget-06-12-2018",
     }
 };
